@@ -1,0 +1,129 @@
+@use '../abstracts';
+
+.social-garant-section {
+  padding-top: 0;
+  padding-bottom: 26px;
+
+  &__inner {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background-color: var(--neutral-color-100);
+    filter: var(--shadow-common);
+  }
+
+  &__title {
+    text-align: center;
+    color: var(--brand-color-primary);
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px 10px;
+    position: relative;
+
+    &:first-of-type {
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+    }
+
+    &:first-of-type::after {
+      position: absolute;
+      content: '';
+      inset-inline: 0;
+      bottom: 0;
+      width: calc(100% - 10px);
+      max-width: 1050px;
+      margin-inline: auto;
+      border-bottom: 1px solid color-mix(in srgb, var(--neutral-color-0) 10%, transparent);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 11px;
+    width: abstracts.fluid-size(120px, 178px, small, large);
+  }
+
+  &__list--narrow {
+    gap: 25px 26px;
+  }
+
+  &__list--narrow &__item {
+    width: 80px;
+  }
+
+
+  &__icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: color-mix(in srgb, var(--neutral-color-0) 5%, transparent);
+    border-radius: 50%;
+    color: var(--brand-color-accent);
+    width: abstracts.fluid-size(80px, 110px, small, large);
+    aspect-ratio: 1;
+
+
+    .svg-icon {
+      height: 36px;
+    }
+  }
+
+  &__item-label {
+    text-align: center;
+  }
+
+  &__subtitle {
+    margin-inline: auto;
+    margin-bottom: 22px;
+    max-width: 640px;
+    text-align: center;
+    color: var(--brand-color-primary);
+  }
+
+  @include abstracts.mq-from(medium) {
+    padding-bottom: 21px;
+    
+    &__inner {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    &__title {
+      margin-bottom: var(--indent-section-block-m);
+    }
+
+    &__list {
+      gap: 25px 16px;
+
+      &:first-of-type {
+        padding-bottom: 72px;
+        margin-bottom: 72px;
+      }
+    }
+
+    &__list--narrow {
+      gap: 25px 114px;
+    }
+  
+    &__list--narrow &__item {
+      width: 80px;
+    }
+  
+
+    &__subtitle {
+      margin-bottom: 47px;
+    }
+
+    &__icon-wrapper {
+      .svg-icon {
+        height: 48px;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+-
+  const greetingsContent = {
+    title: 'Softline',
+    description: 'Ведущий поставщик IT-решений и сервисов.* Мы предлагаем комплексные IT-решения, облака, программное и аппаратное обеспечение, решения по цифровой трансформации и кибербезопасности, а также широкий спектр IT-услуг.',
+    achievements: [
+      {desc: '>30 лет', term: 'на IT-рынке'},
+      {desc: '4600', term: 'сотрудников в России'},
+      {desc: '25', term: 'городов России'},
+      {desc: '2000+', term: 'разработчиков'},
+      {desc: '3000+', term: 'сотрудников ежегодно проходят оценку и обучение'},
+    ],
+  };
+
+section.section.greetings-section
+  h2.section__title.greetings-section__title= greetingsContent.title
+  p.greetings-section__description= greetingsContent.description
+  dl.greetings-section__achievements-list.achievements
+    each item in greetingsContent.achievements
+      .achievements__item
+        dt.achievements__term= item.term
+        dd.achievements__description= item.desc
+  .greetings-section__point-map

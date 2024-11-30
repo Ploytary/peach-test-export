@@ -1,0 +1,17 @@
+-
+  const pageHeaderContent = {
+    activityList: [
+      'Облачные решения',
+      'Кибербезопасность',
+      'Импортозамещение',
+      'Цифровая трансформация',
+    ],
+  };
+
+header.page-header.page-grid
+  nav.page-header__navigation
+    +logo()(class='page-header__logo')
+    ul.page-header__activity
+      each activity in pageHeaderContent.activityList
+        li.page-header__activity-item 
+          a(href='#')= activity

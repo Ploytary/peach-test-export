@@ -1,0 +1,119 @@
+@use '../abstracts';
+
+.business-activity-section {
+  padding-inline: var(--indent-section-inline-s);
+  padding-top: var(--indent-section-block-m);
+
+  &__title {
+    text-align: center;
+    color: var(--brand-color-primary);
+    margin-bottom: 15px;
+  }
+
+  & .accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--neutral-color-100);
+
+    &__summary {
+      position: relative;
+      z-index: 0;
+      padding: 1px 15px 1px 10px;
+
+      &::after {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background-color: hsl(227deg 29% 25% / 50%);
+        content: '';
+      }
+    }
+
+    &__summary-text {
+      max-width: 330px;
+    }
+
+    &__icon {
+      height: 1em;
+      width: 16px;
+      margin-block: 11px;
+    }
+
+    &__details {
+      position: relative;
+      z-index: 0;
+      transition-duration: var(--transition-hover);
+      transition-property: flex-grow, grid-template-rows;
+
+      &::after {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background-color: hsl(227deg 29% 25% / 50%);
+        content: '';
+      }
+    }
+
+    &__details-text {
+      padding: 0 10px 68px;
+    }
+
+    &__slot {
+      position: relative;
+      z-index: 0;
+      background-position: top;
+    }
+
+    &__trigger {
+      gap: 10px;
+      margin-block: 8px;
+    }
+  }
+
+  @include abstracts.mq-from(medium) {
+    padding-top: var(--indent-section-block-l);
+
+    &__title {
+      margin-bottom: 54px;
+    }
+
+    & .accordion {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px 10px;
+
+      &__slot {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        min-height: 260px;
+      }
+
+      &__summary {
+        padding: 1px 20px;
+      } 
+
+      &__icon {
+        margin-block: 19px;
+
+        svg {
+          display: none;
+        }
+      }
+
+      &__details-text {
+        padding: 0 20px 20px;
+      }
+
+      &__slot--open .accordion__summary, &__slot--opened .accordion__summary  {
+        padding: 1px 20px;
+      }
+
+      &__slot--open .accordion__details, &__slot--opened .accordion__details  {
+        flex-grow: 1;
+      }
+    }
+  }
+}

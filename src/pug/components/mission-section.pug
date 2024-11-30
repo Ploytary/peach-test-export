@@ -1,0 +1,11 @@
+-
+  const missionContent = {
+    title: 'Миссия Softline',
+    description: 'Мы помогаем организациям трансформироваться, работать эффективно и безопасно в условиях цифровой экономики.',
+  };
+
+section.section.mission-section
+  h2.section__title.mission-section__title= missionContent.title
+  p.mission-section__description= missionContent.description
+  +common-sprite('background-left-pattern')(class='mission-section__decor-left', aria-hidden='true')
+  +common-sprite('background-right-pattern')(class='mission-section__decor-right', aria-hidden='true')

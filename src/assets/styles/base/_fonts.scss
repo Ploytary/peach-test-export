@@ -1,0 +1,49 @@
+@font-face {
+	font-family: "Proxima Nova";
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src: url("/src/assets/fonts/ProximaNova-Regular.woff2") format("woff2"),
+		url("/src/assets/fonts/ProximaNova-Regular.woff") format("woff"),
+		url("/src/assets/fonts/ProximaNova-Regular.ttf") format("ttf");
+}
+
+@font-face {
+	font-family: "Proxima Nova";
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+	src: url("/src/assets/fonts/ProximaNova-Semibold.woff2") format("woff2"),
+		url("/src/assets/fonts/ProximaNova-Semibold.woff") format("woff"),
+		url("/src/assets/fonts/ProximaNova-Semibold.ttf") format("ttf");
+}
+
+@font-face {
+	font-family: "Proxima Nova Condensed";
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src: url("/src/assets/fonts/ProximaNovaCond-Bold.woff2") format("woff2"),
+		url("/src/assets/fonts/ProximaNovaCond-Bold.woff") format("woff"),
+		url("/src/assets/fonts/ProximaNovaCond-Bold.ttf") format("ttf");
+}
+
+@font-face {
+	font-family: "Proxima Nova Condensed";
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src: url("/src/assets/fonts/ProximaNovaCond-Regular.woff2") format("woff2"),
+		url("/src/assets/fonts/ProximaNovaCond-Regular.woff") format("woff"),
+		url("/src/assets/fonts/ProximaNovaCond-Regular.ttf") format("ttf");
+}
+
+@font-face {
+	font-family: "Proxima Nova Condensed";
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+	src: url("/src/assets/fonts/ProximaNovaCond-Semibold.woff2") format("woff2"),
+		url("/src/assets/fonts/ProximaNovaCond-Semibold.woff") format("woff"),
+		url("/src/assets/fonts/ProximaNovaCond-Semibold.ttf") format("ttf");
+}

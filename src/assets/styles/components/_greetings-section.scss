@@ -1,0 +1,69 @@
+@use '../abstracts';
+
+.greetings-section {
+  padding-top: 30px;
+  padding-inline: 0;
+
+  &__title {
+    padding-inline: var(--indent-section-inline-s)
+  }
+
+  &__description {
+    padding-bottom: var(--indent-section-block-m);
+    padding-inline: var(--indent-section-inline-s)
+  }
+
+  &__achievements-list {
+    padding-bottom: var(--indent-section-block-m);
+  }
+
+  @include abstracts.mq-from(medium) {
+    padding-top: 83px;
+    padding-bottom: var(--indent-section-block-m);
+
+    &__title {
+      margin-bottom: 36px;
+      padding-inline: var(--indent-section-inline-s);
+      text-align: center;
+    }
+
+    &__description {
+      padding-inline: 0;
+      margin-inline: auto;
+      max-width: 1110px;
+      padding-bottom: 79px;
+      text-align: center;
+    }
+  }
+}
+
+.achievements {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 26px 9px;
+  max-width: 600px;
+  margin-inline: auto;
+
+  &__item {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+    max-width: 180px;
+    min-width: 120px;
+  }
+
+  &__term {
+    text-align: center;
+  }
+
+  &__description {
+    color: var(--brand-color-accent);
+  }
+
+  @include abstracts.mq-from(medium) {
+    display: none;
+  }
+}

@@ -1,0 +1,16 @@
+extends ../layout/page-layout
+
+block variables
+  -
+    const pageScripts = [];
+    const pageTitle = 'Описание компании';
+    const currentPageSlug = 'home';
+
+block content
+  main(class= 'page-content page-grid')
+    h1.visually-hidden= pageTitle
+    include ../components/greetings-section.pug
+    include ../components/mission-section.pug
+    include ../components/business-activity-section.pug
+    include ../components/social-garant-section.pug
+    include ../components/corporate-life-section.pug

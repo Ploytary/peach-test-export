@@ -1,0 +1,8 @@
+-
+  locals.getLazysizesAtts = function getLazysizesAtts(options) {
+    return {
+      'data-bgset': options.map((value) => `${require(value.path)} ${value.wDescriptor}w`).join(', '),
+      'data-sizes': 'auto',
+      'class': 'lazyload',
+    };
+  };

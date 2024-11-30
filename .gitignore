@@ -1,0 +1,12 @@
+/node_modules
+/build
+/dist
+/draft
+/refs
+/export
+/src/**/debug-index.css
+/src/**/sprite-dims.scss
+/src/**/sprite.symbol.html
+/src/assets/images/test
+/src/**/php/config.php
+/archive

@@ -1,0 +1,18 @@
+@use '../abstracts';
+
+.section {
+  padding-top: 24px;
+  padding-bottom: var(--indent-section-block-m);
+
+  padding-inline: var(--indent-section-inline-s);
+
+  &__title {
+    color: var(--brand-color-accent);
+    margin-bottom: 13px;
+  }
+
+  @include abstracts.mq-from(medium) {
+    padding-inline: var(--indent-section-inline-m);
+    padding-bottom: var(--indent-section-block-l);
+  }
+}

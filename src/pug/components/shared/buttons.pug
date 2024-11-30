@@ -1,0 +1,6 @@
+mixin slider-button(label)
+  - const {iconOnly, icon, ...props} = attributes;
+  button.button.brand-slider__button(type = 'button')&attributes(props)
+    span.brand-slider__button-label(class = 'visually-hidden')= label
+    if icon
+      +common-sprite(icon)(class = 'brand-slider__button-icon')

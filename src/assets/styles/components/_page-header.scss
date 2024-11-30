@@ -1,0 +1,37 @@
+@use '../abstracts';
+
+.page-header {
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    padding: 15px 4px;
+    border: 0.5px solid color-mix(in srgb, var(--neutral-color-0) 15%, transparent);
+  }
+
+  &__logo {
+    width: 125px;
+    height: 25px;
+  }
+
+  &__activity {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 10px;
+  }
+
+  @include abstracts.mq-from(medium) {
+    &__navigation {
+      padding: 30px 70px;
+      border: 1px solid color-mix(in srgb, var(--neutral-color-0) 15%, transparent);
+    }
+
+    &__activity {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px 20px;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+-
+  const media = [
+    {viewport: 320, imageCount: 1, widthOffset: -40},
+    {viewport: 768, imageCount: 1, widthOffset: -30},
+  ];
+  
+  const corporateLifeContent = {
+    title: 'Корпоративная жизнь',
+    slides: [
+      {
+        media: media,
+        srcset: [
+          {path: '@image/prepared/content/slide-1-960px.jpg', wDescriptor: 960},
+          {path: '@image/prepared/content/slide-1-600px.jpg', wDescriptor: 600},
+          {path: '@image/prepared/content/slide-1-280px.jpg', wDescriptor: 280},
+        ]
+      },
+      {
+        media: media,
+        srcset: [
+          {path: '@image/prepared/content/slide-2-960px.jpg', wDescriptor: 960},
+          {path: '@image/prepared/content/slide-2-600px.jpg', wDescriptor: 600},
+          {path: '@image/prepared/content/slide-2-280px.jpg', wDescriptor: 280},
+        ]
+      },
+      {
+        media: media,
+        srcset: [
+          {path: '@image/prepared/content/slide-3-960px.jpg', wDescriptor: 960},
+          {path: '@image/prepared/content/slide-3-600px.jpg', wDescriptor: 600},
+          {path: '@image/prepared/content/slide-3-280px.jpg', wDescriptor: 280},
+        ]
+      },
+      {
+        media: media,
+        srcset: [
+          {path: '@image/prepared/content/slide-4-960px.jpg', wDescriptor: 960},
+          {path: '@image/prepared/content/slide-4-600px.jpg', wDescriptor: 600},
+          {path: '@image/prepared/content/slide-4-280px.jpg', wDescriptor: 280},
+        ]
+      },
+      {
+        media: media,
+        srcset: [
+          {path: '@image/prepared/content/slide-5-960px.jpg', wDescriptor: 960},
+          {path: '@image/prepared/content/slide-5-600px.jpg', wDescriptor: 600},
+          {path: '@image/prepared/content/slide-5-280px.jpg', wDescriptor: 280},
+        ]
+      },
+    ],
+    buttonLabels: {
+      prevSlide: 'Предыдущий слайд',
+      nextSlide: 'Следующий слайд',
+    },
+  };
+
+mixin card(slide)
+  +respImage(slide, alt = 'Наши сотрудники')
+
+section.section.corporate-life-section
+  header.corporate-life-section__header
+    h2.section__title.corporate-life-section__title= corporateLifeContent.title
+    .corporate-life-section__slider-controls 
+      +slider-button(corporateLifeContent.buttonLabels.prevSlide)(class='brand-slider__button--prev', icon='arrow')
+      +slider-button(corporateLifeContent.buttonLabels.nextSlide)(class='brand-slider__button--next', icon='arrow')
+  .swiper.brand-slider.corporate-life-section__slider
+    ul.swiper-wrapper.brand-slider__wrapper 
+      each slide in corporateLifeContent.slides
+        li.swiper-slide
+          +card(slide)
+    .brand-slider__pagination

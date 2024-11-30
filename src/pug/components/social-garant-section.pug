@@ -1,0 +1,58 @@
+-
+  const socialGarantContent = {
+    title: 'Компенсационный пакет',
+    list: [
+      {
+        label: 'ДМС',
+        icon: 'case',
+      },
+      {
+        label: 'Выходной<br>в день рождения',
+        icon: 'cake',
+      },
+      {
+        label: 'Корпоративная мобильная связь',
+        icon: 'smartphone',
+      },
+      {
+        label: 'Корпоративные скидки на спорт',
+        icon: 'dumbbells',
+      },
+      {
+        label: 'LTI',
+        icon: 'handshake',
+      },
+    ],
+    subtitle: 'Программа дополнительной мотивации<br><strong>доплата 12% от суммы</strong>',
+    listAdd: [
+      {
+        label: 'Оргтехники',
+        icon: 'printer',
+      },
+      {
+        label: 'ДМС',
+        icon: 'case',
+      },
+      {
+        label: 'Ипотеки',
+        icon: 'house',
+      },
+    ]
+  };
+
+section.section.social-garant-section
+  .social-garant-section__inner
+    h2.section__title.social-garant-section__title= socialGarantContent.title
+    ul.social-garant-section__list 
+      each item in socialGarantContent.list
+        li.social-garant-section__item 
+          .social-garant-section__icon-wrapper 
+            +common-sprite(item.icon)(aria-hidden='true')
+          p.social-garant-section__item-label!= item.label
+    h3.section__subtitle.social-garant-section__subtitle!= socialGarantContent.subtitle
+    ul.social-garant-section__list.social-garant-section__list--narrow
+      each item in socialGarantContent.listAdd
+        li.social-garant-section__item.social-garant-section__item
+          .social-garant-section__icon-wrapper
+            +common-sprite(item.icon)(aria-hidden='true')
+          p.social-garant-section__item-label= item.label

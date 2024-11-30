@@ -1,0 +1,45 @@
+@use '../abstracts';
+
+.corporate-life-section {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    color: var(--brand-color-primary);
+    margin-bottom: 0;
+  }
+
+  &__slider {
+    .brand-slider__pagination {
+      display: none;
+    }
+  }
+
+  &__slider-controls {
+    display: none;
+    gap: 20px;
+  }
+
+  @include abstracts.mq-from(medium) {
+    padding-top: 82px;
+
+    &__header {
+      margin-bottom: 55px;
+    }
+
+    &__slider-controls {
+      display: flex;
+    }
+
+    &__slider {
+      .brand-slider__pagination {
+        display: flex;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@use '../abstracts';
+
+.mission-section {
+  position: relative;
+  z-index: 0;
+  background-color: var(--brand-color-accent);
+  color: var(--neutral-color-100);
+  overflow-x: hidden;
+  text-align: center;
+  padding-block: 32px 33px;
+
+  &__title {
+    color: inherit;
+    margin-bottom: 10px;
+  }
+
+  &__decor-left, &__decor-right {
+    position: absolute;
+    z-index: -1;
+    inset-block: 0;
+    margin-block: auto;
+    color: color-mix(in srgb, var(--neutral-color-0) 30%, transparent);
+    max-height: 80%;
+    width: auto;
+    aspect-ratio: 301 / 377;
+  }
+
+  &__decor-left {
+    left: 0;
+    transform: translateX(-22.03%) scale(1.03) translateY(4.1px);
+  }
+
+  &__decor-right {
+    right: 0;
+    transform: translateX(9.33%) scale(1.03) translateY(4.1px);
+  }
+
+  @include abstracts.mq-from(medium) {
+    padding-block: 140px;
+
+    &__description {
+      padding-inline: 10px;
+    }
+
+    &__title {
+      margin-bottom: 39px;
+    }
+
+    &__decor-left {
+      left: 0;
+      transform: translateX(-1.33%) scale(1) translateY(-0.9px);
+    }
+
+    &__decor-right {
+      right: 0;
+      transform: translateX(1.33%) scale(1) translateY(0.9px);
+    }
+  }
+}

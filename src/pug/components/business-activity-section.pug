@@ -1,0 +1,62 @@
+-
+  const some = [
+    {path: '@image/test/test-1.jpg', wDescriptor: 615},
+    {path: '@image/test/test-1.jpg', wDescriptor: 280},
+  ];
+  const businessActivityContent = {
+    title: 'Направления бизнеса',
+    list: [
+      {
+        summary: 'Решения Softline',
+        details: 'ГК Softline предлагает клиентам собственную линейку оборудования (ПК, серверы, торговое оборудование и проч.), разработку программных продуктов, облачных решений, решений в области информационной безопасности.',
+        image: [
+          {path: '@image/prepared/common/direction-card-bg-1-280px.jpg', wDescriptor: 280},
+          {path: '@image/prepared/common/direction-card-bg-1-615px.jpg', wDescriptor: 615},
+        ],
+      },
+      {
+        summary: 'Кибербезопасность',
+        details: 'Softline обладает всеми необходимыми государственными лицензиями для организации проектов по информационной безопасности и аттестации. ',
+        image: [
+          {path: '@image/prepared/common/direction-card-bg-2-280px.jpg', wDescriptor: 280},
+          {path: '@image/prepared/common/direction-card-bg-2-615px.jpg', wDescriptor: 615},
+        ],
+      },
+      {
+        summary: 'Импортозамещение',
+        details: 'ГК Softline обладает широчайшим портфелем решений и услуг для импортозамещения, включая ПО и оборудование собственного производства.',
+        image: [
+          {path: '@image/prepared/common/direction-card-bg-3-280px.jpg', wDescriptor: 280},
+          {path: '@image/prepared/common/direction-card-bg-3-615px.jpg', wDescriptor: 615},
+        ],
+      },
+      {
+        summary: 'Облачные решения',
+        details: 'Softline использует современные облачные решения как российских, так и международных вендоров для масштабирования бизнеса своих клиентов. Подписки, услуги, трансформация.',
+        image: [
+          {path: '@image/prepared/common/direction-card-bg-4-280px.jpg', wDescriptor: 280},
+          {path: '@image/prepared/common/direction-card-bg-4-615px.jpg', wDescriptor: 615},
+        ],
+      },
+      {
+        summary: 'Цифровая трансформация и разработка ПО',
+        details: 'Softline использует современные технологи и новые возможности для увеличения производительности бизнеса заказчика. В штате ГК Softline - 2000+ разработчиков, которые трансформируют ПО под нужды конкретного предприятия.',
+        image: [
+          {path: '@image/prepared/common/direction-card-bg-5-280px.jpg', wDescriptor: 280},
+          {path: '@image/prepared/common/direction-card-bg-5-615px.jpg', wDescriptor: 615},
+        ],
+      },
+      {
+        summary: 'Техническая поддержка Softline',
+        details: '200+ инженеров, 24 часа в сутки, 7 дней в неделю, 12 месяцев в году, сервисное партнерство с 30+ мировыми производителями.',
+        image: [
+          {path: '@image/prepared/common/direction-card-bg-6-280px.jpg', wDescriptor: 280},
+          {path: '@image/prepared/common/direction-card-bg-6-615px.jpg', wDescriptor: 615},
+        ],
+      },
+    ],
+  };
+
+section.section.business-activity-section
+  h2.section__title.business-activity-section__title= businessActivityContent.title
+  +accordion(businessActivityContent.list)(class='business-activity-section__list')
